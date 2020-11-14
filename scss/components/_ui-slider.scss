@@ -1,0 +1,75 @@
+.ui-slider{
+  position: relative;
+  height: 1px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.ui-slider-range{
+  position: absolute;
+  z-index: 1;
+  font-size: .7em;
+  display: block;
+  border: 0;
+  border-radius: 1em;
+  background-color: #E01B1B;
+
+  top: 0;
+  height: 100%;
+}
+.price_slider_wrapper .ui-widget-content{
+
+  background: #C2C2C2;
+}
+.ui-slider-handle {
+  position: absolute;
+  z-index: 2;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #E01B1B;
+  background-color: #101010;
+  border-radius: 50%;
+  cursor: ew-resize;
+  outline: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: -8px;
+}
+.price_slider_amount {
+  text-align: right;
+}
+.woocommerce button.button{
+  display: none;
+}
+.clear {
+  clear: both;
+}
+.price_slider_amount input[type='text']{
+  display: block !important;
+  font-weight: 500;
+  font-size: 16px;
+  color: #FFFFFF;
+  background: transparent;
+  border: 1px solid #C2C2C2;
+  border-radius: 6px;
+  width: 104px;
+  height: 42px;
+  padding: 0 15px;
+}
+.price_slider_amount-inputs{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 20px;
+}
+.price_slider_amount-inputs span{
+  width: 10px;
+  height: 1px;
+  background: #C2C2C2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.price_slider_wrapper .price_label{
+  display: none !important;
+}

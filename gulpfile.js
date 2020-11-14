@@ -19,6 +19,8 @@ gulp.task('scripts', function() {
         'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
         'node_modules/swiper/dist/js/swiper.min.js',
         'node_modules/inputmask/dist/jquery.inputmask.min.js',
+        'node_modules/selectric/src/jquery.selectric.js',
+        'node_modules/bootstrap/dist/js/bootstrap.min.js',
     ])
         .pipe(concat('libs.min.js')) // Собираем их в новом файле libs.min.js
         .pipe(uglify()) // Сжимаем JS файл

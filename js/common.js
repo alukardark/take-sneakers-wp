@@ -1,5 +1,67 @@
 jQuery(document).ready(function ($) {
 
+    $('select').selectric();
+
+
+    $(".price_slider").on("slidechange", function (event, ui) {
+        setTimeout(function () {
+            $('.woocommerce.widget_price_filter form').submit();
+        }, 500)
+    });
+
+    $('.price_slider_amount-inputs input[type="text"]').on('keydown', function () {
+        setTimeout(function () {
+            $('.woocommerce.widget_price_filter form').submit();
+        }, 500)
+    });
+
+    var idCollapse = '';
+    $('[data-toggle="collapse"]').each(function () {
+        idCollapse = $(this).next().attr('id');
+        $(this).attr('data-target', '#' + idCollapse);
+    });
+
+    $('.widget-title').click(function () {
+        $(this).toggleClass('active');
+        $(this).parent('.widget').toggleClass('active');
+        $(this).siblings().slideToggle(200);
+    });
+
+
+    $('.widget>ul>li:nth-of-type(1n+4)').addClass('hide');
+
+    $('.widget>ul').each(function () {
+        if ($(this).find('li').length > 3) {
+            $(this).after("<div class='hideList-btn'>+ Больше</div>");
+        }
+    });
+
+    $('.hideList-btn').click(function () {
+        $(this).toggleClass('active');
+        $(this).prev('ul').find('li.hide').toggleClass('active');
+        if ($(this).hasClass('active')) {
+            $(this).text("- Скрыть");
+        } else {
+            $(this).text("+ Больше");
+        }
+        $(this).prev('ul').find('li.hide').slideToggle(200);
+    });
+
+
+    $('.products').append("<li class='product product--hidden'></li><li class='product product--hidden'></li>");
+    $('.main__products').append("<li class='main__products-item main__products-item--hidden'></li><li class='main__products-item main__products-item--hidden'></li><li class='main__products-item main__products-item--hidden'></li>");
+
+
+    // setTimeout(function () {
+    //     //     $('.woocommerce-widget-layered-nav-list').each(function () {
+    //     //         console.log();
+    //     //         $xxx = $(this).parent().attr('id');
+    //     //         $(this).attr('id', $xxx);
+    //     //         $(this).prev('.widget-title').attr('data-target', '#' +  $xxx);
+    //     //     });
+    //     //
+    //     // }, 1100)
+
     // $("input[type='tel']").inputmask({"mask": "+7(999) 999-9999"});
 
 
@@ -59,12 +121,6 @@ jQuery(document).ready(function ($) {
     //         autoHide: false
     //     });
     // });
-
-
-    
-
-
-
 
 
 });
