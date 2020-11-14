@@ -93,8 +93,12 @@ a {
   color: inherit;
   text-decoration: none;
   &:hover {
-    color: #E01B1B;
+    color: #787878;
     text-decoration: none;
+  }
+  &:active{
+    transition: 0s ease-in-out all;
+    color: #E01B1B;
   }
 }
 

@@ -9,7 +9,7 @@
     position: relative;
     &:before {
       content: '';
-      background: url(../img/dotted-left.svg) center no-repeat;
+      background: url(../img/dotted-left.svg) center/contain no-repeat;
       width: 338px;
       height: 166px;
       position: absolute;
@@ -18,7 +18,7 @@
     }
     &:after {
       content: '';
-      background: url(../img/dotted-right.svg) center no-repeat;
+      background: url(../img/dotted-right.svg) center/contain no-repeat;
       width: 338px;
       height: 166px;
       position: absolute;
@@ -64,7 +64,8 @@
       transition: .2s ease-in-out transform;
     }
     &:hover {
-      opacity: .75;
+      color: #C51A1A;
+      border-color: #C51A1A;
       &:after{
         transform: translateX(3px);
       }
@@ -118,10 +119,10 @@
 
 
 
-
-  &__new{
-
+  &__new-items{
+    padding-bottom: 100px;
   }
+
   &__new-items-header{
     display: flex;
     justify-content: space-between;
@@ -134,7 +135,6 @@
       text-transform: uppercase;
     }
     a{
-      color: #FFFFFF;
       font-weight: 500;
       font-size: 16px;
       position: relative;
@@ -146,7 +146,15 @@
         margin-left: 23px;
         background: url(../img/arrow-top.svg) center right no-repeat;
         transform: rotate(90deg);
-        transition: .2s ease-in-out transform;
+        position: relative;
+        right: 0;
+        transition: .2s ease-in-out all;
+      }
+      &:hover{
+        &:after{
+          opacity: .7;
+          right: -5px;
+        }
       }
     }
   }
@@ -160,6 +168,7 @@
     width: 100%;
     margin-bottom: 55px;
     position: relative;
+
     h2{
       font-weight: normal;
       font-size: 18px;
@@ -167,16 +176,20 @@
     }
     img{
       max-width: 100%;
-      height: 251px;
+      height: auto;
       display: block;
       margin-bottom: 15px;
     }
     .price{
       font-weight: 600;
       font-size: 18px;
+      color: #fff;
       .woocommerce-Price-currencySymbol {
         display: inline-block;
         margin-left: 5px;
+      }
+      ins{
+        text-decoration: none;
       }
     }
     .marker-new {
@@ -202,6 +215,139 @@
       padding: 0 !important;
       height: 0 !important;
     }
+    &:hover{
+      .price{
+
+      }
+    }
   }
 
+}
+
+@media (max-width: $xl) {
+  .main {
+    &__logo{
+      height: 200px;
+    }
+    &__head{
+      &:before, &:after{
+        width: 290px;
+        height: 150px;
+      }
+    }
+    &__categories-item{
+      padding: 0 30px 25px;
+      height: 370px;
+      width: 300px;
+      span{
+        font-size: 26px;
+      }
+    }
+    &__products-item {
+      max-width: 225px;
+    }
+    &__new-items {
+      padding-bottom: 70px;
+    }
+    &__desc{
+        font-size: 22px;
+    }
+  }
+}
+
+@media (max-width: $lg){
+  .main {
+    &__logo{
+      height: 180px;
+      margin-bottom: 15px;
+    }
+    &__head{
+      margin-top: 40px;
+      padding-bottom: 90px;
+      &:before, &:after{
+        width: 250px;
+        height: 130px;
+      }
+    }
+    &__desc{
+      font-size: 19px;
+    }
+    &__categories{
+      margin-bottom: 90px;
+    }
+    &__categories-item{
+      padding: 0 15px 15px;
+      height: 270px;
+      width: 230px;
+      span{
+        font-size: 24px;
+      }
+    }
+    &__products-item {
+      &:nth-of-type(6n+1){
+        display: none;
+      }
+    }
+
+
+    &__new-items {
+      padding-bottom: 70px;
+    }
+  }
+}
+
+@media (max-width: $md){
+  .main {
+    &__logo{
+      height: 110px;
+    }
+    &__head{
+      margin-top: 55px;
+      padding-bottom: 70px;
+      &:after{
+        width: 150px;
+        height: 150px;
+        right: -33px;
+        top: -80px;
+      }
+      &:before{
+        width: 150px;
+        height: 150px;
+        left: -83px;
+        bottom: 135px;
+      }
+    }
+    &__desc{
+      font-size: 14px;
+    }
+    &__categories{
+      margin-bottom: 90px;
+    }
+    &__categories-item{
+      padding: 0 15px 15px;
+      height: 270px;
+      width: 230px;
+      span{
+        font-size: 24px;
+      }
+    }
+    &__products-item {
+      &:nth-of-type(6n+1){
+        display: none;
+      }
+    }
+
+
+    &__new-items {
+      padding-bottom: 70px;
+    }
+  }
+}
+@media (max-width: $sm){
+  .main {
+
+    &__new-items{
+      padding-bottom: 0px;
+    }
+  }
 }

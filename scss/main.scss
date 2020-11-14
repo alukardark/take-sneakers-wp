@@ -49,7 +49,8 @@
 @import
 'layout/header',
 'layout/main',
-'layout/shop'
+'layout/shop',
+'layout/footer'
 ;
 
 
@@ -59,6 +60,7 @@
 'components/burger',
 'components/pagination',
 'components/woocommerce-breadcrumb',
+'components/woocommerce-pagination',
 'components/ui-slider';
 //'components/breadcrumbs',
 //'components/button',

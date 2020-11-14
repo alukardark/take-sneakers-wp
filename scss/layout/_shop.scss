@@ -33,6 +33,9 @@
         padding: 0 !important;
         height: 0 !important;
       }
+      &:hover{
+
+      }
     }
   }
   .woocommerce-products-header{
@@ -46,10 +49,11 @@
   .woocommerce-Price-amount {
     font-weight: 600;
     font-size: 18px;
+
   }
   .attachment-woocommerce_thumbnail, .woocommerce-placeholder {
     max-width: 100%;
-    height: 251px;
+    height: auto;
     display: block;
     margin-bottom: 15px;
   }
@@ -95,10 +99,15 @@
     display: inline-block;
     margin-left: 5px;
   }
-  .price ins {
-    margin-left: 10px;
-    display: inline-block;
+  .price{
+    color: #fff;
+    ins {
+      margin-left: 10px;
+      display: inline-block;
+      text-decoration: none;
+    }
   }
+
 
   .widget {
     transition: .3s ease-in-out padding-bottom;
@@ -184,6 +193,12 @@
         border-radius: 6px;
         background: transparent;
         margin-right: 15px;
+        transition: .3s ease-in-out all .0s;
+      }
+      &:hover{
+        &:before {
+          background: #1E1E1E;
+        }
       }
     }
 

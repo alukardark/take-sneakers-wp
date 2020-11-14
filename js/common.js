@@ -52,6 +52,10 @@ jQuery(document).ready(function ($) {
     $('.main__products').append("<li class='main__products-item main__products-item--hidden'></li><li class='main__products-item main__products-item--hidden'></li><li class='main__products-item main__products-item--hidden'></li>");
 
 
+    $('.burger').click(function(){
+        $(this).toggleClass('active')
+    });
+
     // setTimeout(function () {
     //     //     $('.woocommerce-widget-layered-nav-list').each(function () {
     //     //         console.log();
