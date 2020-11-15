@@ -1,19 +1,19 @@
-.woocommerce-pagination{
-  &>.page-numbers{
+.woocommerce-pagination {
+  & > .page-numbers {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    li{
+    li {
       margin-right: 20px;
-      &:last-of-type{
+      &:last-of-type {
         margin-right: 0;
       }
-      .page-numbers{
+      .page-numbers {
         font-weight: 600;
         font-size: 18px;
         letter-spacing: 0.05em;
         color: #FFFFFF;
-        &.current{
+        &.current {
           width: 30px;
           height: 30px;
           background: #E01B1B;
@@ -22,7 +22,15 @@
           text-align: center;
           justify-content: center;
           border-radius: 50%;
+          pointer-events: none;
+          cursor: default;
         }
+      }
+    }
+    a {
+      transition: .2s ease-in-out all;
+      &:hover {
+        opacity: .75;
       }
     }
   }

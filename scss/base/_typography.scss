@@ -64,9 +64,7 @@ h4 {
     font-size: 16px;
   }
   h1 {
-    font-size: 45px;
-    margin-bottom: 50px;
-    margin-top: 55px;
+    margin-bottom: 65px;
   }
   h2 {
     font-size: 45px;
@@ -78,8 +76,6 @@ h4 {
 
 @media (max-width: $md) {
   h1 {
-    font-size: 40px;
-    line-height: 1;
   }
   h2 {
     font-size: 40px;
@@ -98,9 +94,7 @@ h4 {
 
 @media (max-width: $sm) {
   h1 {
-    font-size: 38px;
-    margin-bottom: 25px;
-    margin-top: 40px;
+
   }
   h2 {
     font-size: 38px;

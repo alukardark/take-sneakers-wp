@@ -66,7 +66,7 @@
     &:hover {
       color: #C51A1A;
       border-color: #C51A1A;
-      &:after{
+      &:after {
         transform: translateX(3px);
       }
     }
@@ -105,56 +105,50 @@
     }
     &:hover {
       opacity: .85;
-      span{
-        &:after{
+      span {
+        &:after {
           transform: translateX(5px);
         }
       }
     }
   }
 
-
-
-
-
-
-
-  &__new-items{
+  &__new-items {
     padding-bottom: 100px;
   }
 
-  &__new-items-header{
+  &__new-items-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 37px;
-    h2{
+    h2 {
       margin: 0;
       font-weight: 600;
       font-size: 30px;
       text-transform: uppercase;
     }
-    a{
-      font-weight: 500;
-      font-size: 16px;
+  }
+  &__new-items-link {
+    font-weight: 500;
+    font-size: 16px;
+    position: relative;
+    &:after {
+      width: 22px;
+      height: 22px;
+      display: inline-block;
+      content: '';
+      margin-left: 23px;
+      background: url(../img/arrow-top.svg) center right no-repeat;
+      transform: rotate(90deg);
       position: relative;
-      &:after{
-        width: 22px;
-        height: 22px;
-        display: inline-block;
-        content: '';
-        margin-left: 23px;
-        background: url(../img/arrow-top.svg) center right no-repeat;
-        transform: rotate(90deg);
-        position: relative;
-        right: 0;
-        transition: .2s ease-in-out all;
-      }
-      &:hover{
-        &:after{
-          opacity: .7;
-          right: -5px;
-        }
+      right: 0;
+      transition: .2s ease-in-out all;
+    }
+    &:hover {
+      &:after {
+        opacity: .7;
+        right: -5px;
       }
     }
   }
@@ -169,18 +163,18 @@
     margin-bottom: 55px;
     position: relative;
 
-    h2{
+    h2 {
       font-weight: normal;
       font-size: 18px;
       margin-bottom: 5px;
     }
-    img{
+    img {
       max-width: 100%;
       height: auto;
       display: block;
       margin-bottom: 15px;
     }
-    .price{
+    .price {
       font-weight: 600;
       font-size: 18px;
       color: #fff;
@@ -188,7 +182,7 @@
         display: inline-block;
         margin-left: 5px;
       }
-      ins{
+      ins {
         text-decoration: none;
       }
     }
@@ -210,13 +204,13 @@
       justify-content: center;
       padding: 0 10px;
     }
-    &--hidden{
+    &--hidden {
       margin: 0 !important;
       padding: 0 !important;
       height: 0 !important;
     }
-    &:hover{
-      .price{
+    &:hover {
+      .price {
 
       }
     }
@@ -226,20 +220,20 @@
 
 @media (max-width: $xl) {
   .main {
-    &__logo{
+    &__logo {
       height: 200px;
     }
-    &__head{
-      &:before, &:after{
+    &__head {
+      &:before, &:after {
         width: 290px;
         height: 150px;
       }
     }
-    &__categories-item{
+    &__categories-item {
       padding: 0 30px 25px;
       height: 370px;
       width: 300px;
-      span{
+      span {
         font-size: 26px;
       }
     }
@@ -249,46 +243,45 @@
     &__new-items {
       padding-bottom: 70px;
     }
-    &__desc{
-        font-size: 22px;
+    &__desc {
+      font-size: 22px;
     }
   }
 }
 
-@media (max-width: $lg){
+@media (max-width: $lg) {
   .main {
-    &__logo{
+    &__logo {
       height: 180px;
       margin-bottom: 15px;
     }
-    &__head{
+    &__head {
       margin-top: 40px;
       padding-bottom: 90px;
-      &:before, &:after{
+      &:before, &:after {
         width: 250px;
         height: 130px;
       }
     }
-    &__desc{
+    &__desc {
       font-size: 19px;
     }
-    &__categories{
+    &__categories {
       margin-bottom: 90px;
     }
-    &__categories-item{
+    &__categories-item {
       padding: 0 15px 15px;
       height: 270px;
       width: 230px;
-      span{
+      span {
         font-size: 24px;
       }
     }
     &__products-item {
-      &:nth-of-type(6n+1){
+      &:nth-of-type(1n+7) {
         display: none;
       }
     }
-
 
     &__new-items {
       padding-bottom: 70px;
@@ -296,58 +289,102 @@
   }
 }
 
-@media (max-width: $md){
+@media (max-width: $md) {
   .main {
-    &__logo{
+
+    &__new-items {
+      padding-bottom: 70px;
+    }
+    &__categories {
+      margin-bottom: 90px;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__categories-item {
+
+      max-width: 100%;
+      padding: 0 30px 25px;
+      width: 100%;
+      margin-bottom: 23px;
+      height: 270px;
+      background-position: 50% 85%;
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+      span {
+        font-size: 30px;
+      }
+    }
+    &__products-item {
+      max-width: 245px;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .main {
+
+    &__logo {
       height: 110px;
     }
-    &__head{
+    &__head {
       margin-top: 55px;
-      padding-bottom: 70px;
-      &:after{
+      padding-bottom: 55px;
+      &:after {
         width: 150px;
         height: 150px;
         right: -33px;
         top: -80px;
       }
-      &:before{
+      &:before {
         width: 150px;
         height: 150px;
         left: -83px;
         bottom: 135px;
       }
     }
-    &__desc{
+    &__desc {
       font-size: 14px;
+      max-width: 220px;
     }
-    &__categories{
-      margin-bottom: 90px;
+    &__link {
+      padding: 18px 15px;
     }
-    &__categories-item{
+
+
+    &__categories-item {
+      max-width: 330px;
+      height: 240px;
       padding: 0 15px 15px;
-      height: 270px;
-      width: 230px;
-      span{
-        font-size: 24px;
-      }
+      background-position: center bottom;
     }
-    &__products-item {
-      &:nth-of-type(6n+1){
+    &__new-items-header {
+      a{
         display: none;
       }
     }
-
+    &__products-item {
+      max-width: 48.5%;
+      margin-bottom: 45px;
+      img{
+        margin-bottom: 10px;
+      }
+      h2{
+        font-size: 16px;
+      }
+      .price{
+        font-size: 16px;
+      }
+      .marker-new{
+        height: 25px;
+        font-size: 12px;
+        padding: 0px 5px;
+        min-width: 75px;
+      }
+    }
 
     &__new-items {
-      padding-bottom: 70px;
-    }
-  }
-}
-@media (max-width: $sm){
-  .main {
-
-    &__new-items{
-      padding-bottom: 0px;
+      padding-bottom: 40px;
     }
   }
 }

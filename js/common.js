@@ -28,11 +28,14 @@ jQuery(document).ready(function ($) {
     });
 
 
-    $('.widget>ul>li:nth-of-type(1n+4)').addClass('hide');
+    $('.widget>ul>li:nth-of-type(1n+4)').not('.chosen').addClass('hide');
 
     $('.widget>ul').each(function () {
         if ($(this).find('li').length > 3) {
-            $(this).after("<div class='hideList-btn'>+ Больше</div>");
+            if($(this).find('li:nth-of-type(1n+4)').not('.chosen').length > 0){
+                $(this).after("<div class='hideList-btn'>+ Больше</div>");
+            }
+
         }
     });
 
@@ -48,12 +51,44 @@ jQuery(document).ready(function ($) {
     });
 
 
-    $('.products').append("<li class='product product--hidden'></li><li class='product product--hidden'></li>");
+    $('.shop-archive .products').append("<li class='product product--hidden'></li><li class='product product--hidden'></li>");
     $('.main__products').append("<li class='main__products-item main__products-item--hidden'></li><li class='main__products-item main__products-item--hidden'></li><li class='main__products-item main__products-item--hidden'></li>");
 
 
     $('.burger').click(function(){
-        $(this).toggleClass('active')
+        $(this).toggleClass('active');
+        $('body').toggleClass('modal-open');
+        $('.header__mobile').toggleClass('active');
+    });
+
+
+    $('#secondary').prepend("<div class='aside-btn-mobile aside-btn'>Назад</div>");
+    $('.aside-btn').click(function(){
+        $('.wrapper').toggleClass('active');
+        $('aside').toggleClass('active');
+    });
+
+
+
+    $(document).click( function(e){
+        if ( $(e.target).closest('#secondary').length || $(e.target).closest('.aside-btn').length  ) {
+            return;
+        }
+        if($('#secondary').hasClass('active')){
+            $('.wrapper').removeClass('active');
+            $('aside').removeClass('active');
+        }
+
+    });
+
+
+
+    $( window ).resize(function() {
+        if($('.burger').hasClass('active')){
+            $('.burger').removeClass('active');
+            $('body').removeClass('modal-open');
+            $('.header__mobile').removeClass('active');
+        }
     });
 
     // setTimeout(function () {

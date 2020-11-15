@@ -10,35 +10,45 @@
   width: 0 !important;
 }
 
-
 .wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100%;
   position: relative;
-  &.black{
+  &.black {
     background: #110D10;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 20;
+    opacity: 0;
+    visibility: hidden;
+    transition: .2s ease-in-out all;
   }
 }
 
 .wrapper-content {
   flex: 1 0 auto;
-  &.black{
+  &.black {
     background: #110D10;
   }
 }
-
 
 .sticky {
   position: fixed;
   z-index: 101;
 }
+
 .stop {
   position: relative;
   z-index: 101;
 }
-
-
 
 @-webkit-keyframes tape {
   0% {
@@ -58,6 +68,13 @@
   }
 }
 
-@media (max-width: $md) {
-
+@media (max-width: $lg) {
+  .wrapper {
+    &.active {
+      &:after {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
 }
