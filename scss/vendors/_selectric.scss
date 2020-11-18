@@ -1,73 +1,156 @@
-.selectric-wrapper{
-  width: 100%;
-}
-.selectric {
-  width: 100%;
-  border: none;
-  background: #101010;
-  display: flex;
-  align-items: center;
-}
+.shop {
+  .selectric-wrapper {
+    width: 100%;
+  }
+  .selectric {
+    width: 100%;
+    border: none;
+    background: #101010;
+    display: flex;
+    align-items: center;
+  }
 
-.selectric .label{
-  color: #FFFFFF;
-  font-weight: 500;
-  font-size: 16px;
-  margin: 0 15px 0 10px;
-  transition: .2s ease-in-out all;
-  &:hover{
-    color: #787878;
-    &+.button{
-      opacity: .7;
+  .selectric .label {
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 16px;
+    margin: 0 15px 0 10px;
+    transition: .2s ease-in-out all;
+    &:hover {
+      color: #787878;
+      & + .button {
+        opacity: .7;
+      }
     }
   }
-}
-.selectric-items{
-  background: transparent;
-  border: none;
-  box-shadow: none;
-}
-.selectric-items li {
-  color: #FFFFFF;
-  font-weight: 500;
-  font-size: 16px;
-  background: #101010;
-  transition: .2s ease-in-out all;
-}
-.selectric-items li.highlighted{
-  background: #E01B1B ;
-  color: #fff;
-}
-.selectric-items li.selected{
-  background: #E01B1B ;
-  color: #fff;
-}
-.selectric-items li:hover {
-  background: #E01B1B ;
-  color: #fff;
-}
-.selectric .button{
-  transition: .2s ease-in-out all;
-  background: url(../img/arrow-top.svg) center left/contain no-repeat;
-  font-size: 0;
-  width: 18px;
-  height: 15px;
-  transform: scale(1, -1);
-  position: static;
-  &:before{
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: url(../img/arrow-top.svg) center right/contain no-repeat;
+  .selectric-items {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+  .selectric-items li {
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 16px;
+    background: #101010;
+    transition: .2s ease-in-out all;
+  }
+  .selectric-items li.highlighted {
+    background: #E01B1B;
+    color: #fff;
+  }
+  .selectric-items li.selected {
+    background: #E01B1B;
+    color: #fff;
+  }
+  .selectric-items li:hover {
+    background: #E01B1B;
+    color: #fff;
+  }
+  .selectric .button {
+    transition: .2s ease-in-out all;
+    background: url(../img/arrow-top.svg) center left/contain no-repeat;
+    font-size: 0;
+    width: 18px;
+    height: 15px;
     transform: scale(1, -1);
+    position: static;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: url(../img/arrow-top.svg) center right/contain no-repeat;
+      transform: scale(1, -1);
+    }
+    &:after {
+      display: none;
+    }
   }
-  &:after{
-    display: none;
+  .selectric-open .selectric {
+    border: none;
   }
 }
-.selectric-open .selectric{
-  border: none;
+
+.shop-single {
+  .selectric-wrapper {
+    width: 100%;
+  }
+  .selectric {
+    width: 100%;
+    background: #101010;
+    display: flex;
+    align-items: center;
+    border: 1px solid #515151;
+    border-radius: 6px;
+    height: 46px;
+  }
+
+  .selectric .label {
+    font-weight: 500;
+    font-size: 16px;
+    color: #FFFFFF;
+    margin: 0 20px;
+    transition: .2s ease-in-out all;
+    width: 100%;
+
+    &:hover {
+      color: #787878;
+      & + .button {
+        opacity: .7;
+      }
+    }
+  }
+  .selectric-items {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+
+  }
+  .selectric-scroll {
+    border-radius: 0 0 6px 6px;
+    border: 1px solid #c4c4c4;
+  }
+
+  .selectric-items li {
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 16px;
+    background: #101010;
+    transition: .2s ease-in-out all;
+    padding: 10px 20px;
+  }
+  .selectric-items li.highlighted {
+    background: #E01B1B;
+    color: #fff;
+  }
+  .selectric-items li.selected {
+    background: #E01B1B;
+    color: #fff;
+  }
+  .selectric-items li:hover {
+    background: #E01B1B;
+    color: #fff;
+  }
+  .selectric .button {
+    background: url(../img/select-arrow.svg) center/contain no-repeat;
+    transition: .2s ease-in-out all;
+    font-size: 0;
+    width: 13px;
+    height: 10px;
+    position: static;
+    margin-right: 15px;
+    &:after {
+      display: none;
+    }
+  }
+  .selectric-open .selectric {
+    border-bottom: none;
+    border-radius: 6px 6px 0 0;
+    .button{
+      transform: rotate(-180deg);
+    }
+  }
 }

@@ -17,7 +17,6 @@
   height: 100%;
 }
 .price_slider_wrapper .ui-widget-content{
-
   background: #C2C2C2;
 }
 .ui-slider-handle {
@@ -37,7 +36,7 @@
 .price_slider_amount {
   text-align: right;
 }
-.woocommerce button.button{
+.price_slider_wrapper button.button{
   display: none;
 }
 .clear {

@@ -208,6 +208,11 @@
     right: -14px;
     position: absolute;
     padding: 0 3px;
+    opacity: 1;
+    transition: .2s ease-in-out opacity;
+    &--empty{
+      opacity: 0;
+    }
   }
 
   &__mobile-cont{
