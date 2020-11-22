@@ -180,10 +180,14 @@
       color: #fff;
       .woocommerce-Price-currencySymbol {
         display: inline-block;
-        margin-left: 5px;
+        margin-left: 3px;
+      }
+      del{
+        font-size: 15px;
+        margin-right: 5px;
+        color: #a0a0a0;
       }
       ins {
-        margin-left: 10px;
         display: inline-block;
         text-decoration: none;
       }

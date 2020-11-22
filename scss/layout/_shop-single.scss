@@ -158,8 +158,6 @@
       font-weight: 500;
       font-size: 24px;
       margin: 20px 0 24px;
-      //opacity: 0;
-      //visibility: hidden;
       transition: .2s ease-in-out hidden, .2s ease-in-out opacity;
       &:first-of-type{
         display: none;
@@ -180,6 +178,14 @@
       }
       .stock {
         display: none;
+      }
+      del{
+        font-size: 16px;
+        margin-right: 5px;
+        color: #a0a0a0;
+      }
+      ins{
+        text-decoration: none;
       }
     }
     .quantity {

@@ -143,6 +143,40 @@ input:focus:-ms-input-placeholder {
 }
 
 
+textarea::-webkit-input-placeholder {
+  color: #A0A0A0;
+  transition: opacity 0.3s ease;
+}
+textarea::-moz-placeholder {
+  color: #A0A0A0;
+  transition: opacity 0.3s ease;
+}
+textarea:-moz-placeholder {
+  color: #A0A0A0;
+  transition: opacity 0.3s ease;
+}
+textarea:-ms-input-placeholder {
+  color: #A0A0A0;
+  transition: opacity 0.3s ease;
+}
+textarea:focus::-webkit-input-placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+textarea:focus::-moz-placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+textarea:focus:-moz-placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+textarea:focus:-ms-input-placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+
 @media (max-width: 1200px) {
   body{
     min-height: 450px;

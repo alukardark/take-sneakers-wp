@@ -83,6 +83,14 @@
         background-image: url(../img/vk-white.svg);
       }
     }
+    &--ok {
+      background-image: url(../img/ok-black.svg);
+      background-size: 8px !important;
+      &:before {
+        background-image: url(../img/ok-white.svg);
+        background-size: 8px !important;
+      }
+    }
     &--telegram {
       background-image: url(../img/telegram.svg);
       &:before {
@@ -169,6 +177,7 @@
     justify-content: space-between;
     max-width: 70px;
     width: 100%;
+    position: relative;
   }
   &__search {
     background: url(../img/search.svg) center/contain no-repeat;
@@ -180,6 +189,34 @@
       opacity: .75;
     }
   }
+  &__search-form{
+    position: absolute;
+    bottom: -60px;
+    right: 0;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(50%);
+    transition: .2s ease-in-out all;
+    background: #101010;
+    &.active{
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+  &__search-input{
+    width: 250px;
+    border: 1px solid #515151;
+    border-radius: 6px;
+    background: transparent;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 0 20px;
+    height: 46px;
+    box-sizing: border-box !important;
+
+  }
   &__basket {
     width: 22px;
     height: 20px;
@@ -187,6 +224,9 @@
     position: relative;
     cursor: pointer;
     transition: .2s ease-in-out opacity;
+    &.off{
+      pointer-events: none;
+    }
     &:hover {
       opacity: .75;
     }
@@ -354,5 +394,6 @@
       font-size: 10px;
       background-position: 100% 30%;
     }
+
   }
 }

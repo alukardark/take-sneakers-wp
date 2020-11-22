@@ -1,4 +1,4 @@
-.scrollbar{
+.scrollbar, .widget_shopping_cart{
   .simplebar-content {
     padding-right: 0px !important;
     padding-left: 0px !important;
@@ -8,7 +8,7 @@
     right: 0px;
   }
   .simplebar-scrollbar:before {
-    background-color: #B40600;
+    background-color: #E01B1B;
     border-radius: 0px;
   }
   .simplebar-track.simplebar-vertical {

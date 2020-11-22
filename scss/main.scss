@@ -28,8 +28,8 @@
 //@import "vendors/wow";
 //@import "node_modules/choices.js/public/assets/styles/choices.min";
 //@import "vendors/choices";
-//@import "node_modules/simplebar/dist/simplebar.min";
-//@import "vendors/simplebar";
+@import "node_modules/simplebar/dist/simplebar.min";
+@import "vendors/simplebar";
 //@import "node_modules/tippy.js/dist/tippy";
 //@import "vendors/tippy";
 //@import "node_modules/tippy.js/dist/themes/light";
@@ -53,7 +53,11 @@
 'layout/shop-single',
 'layout/footer',
 'layout/content',
-'layout/mini-cart'
+'layout/mini-cart',
+'layout/brands-page',
+'layout/page-checkout',
+'layout/sport-page',
+'layout/page-single'
 ;
 
 
@@ -72,6 +76,9 @@
 //'components/add-basket-message',
 //'components/progress',
 //'components/tilter';
+
+
+
 
 
 
